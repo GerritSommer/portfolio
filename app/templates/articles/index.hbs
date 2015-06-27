@@ -1,0 +1,23 @@
+  <main>
+    <section class="row">
+
+    <div class="col-3-1">
+      {{#each article in articlesByTags}}
+        {{article-preview article=article}}
+      {{/each}}
+    </div>
+
+    <aside class="col-1-3">
+      <h4>Categories</h4>
+      <div class="tag-list">
+        {{#each tag in controller.tags}}
+          {{tag-item tagItem=tag action="selectTag"}}
+        {{/each}}
+      </div>
+
+    </aside>
+
+  </section>
+{{!outlet}}
+
+  </main>

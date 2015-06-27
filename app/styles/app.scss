@@ -1,0 +1,149 @@
+@import "reset";
+@import "fonts";
+@import "header";
+@import "footer";
+@import "columns";
+@import "articles";
+@import "tags";
+// @import "hero";
+// @import "titles";
+// @import "about";
+// @import "contact";
+// @import "process";
+// @import "team";
+// @import "works";
+
+
+/*  General CSS  */
+body {
+  background: #fff;
+  margin: 0 3em;
+  font-family: "raleway-regular", arial;
+  font-size: 16px;
+}
+
+.clearfix:before, .clearfix:after, .row:before, .row:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after, .row:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+a {
+  color: #3a87ad;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+
+  li {
+    font-size: 14px;
+    margin-left: 0.5em;
+  }
+
+}
+
+p {
+  color: #898d94;
+  font-family: "raleway-regular", arial;
+  font-size: 14px;
+  line-height: 30px;
+  letter-spacing: 1px;
+}
+
+[data-ember-action] {
+  cursor: pointer;
+}
+
+.inline {
+  display: inline-block;
+}
+
+ul.link-list {
+  li {
+    margin: 1em auto;
+    a img {
+      vertical-align: middle;
+    }
+  }
+}
+
+
+
+
+
+
+/*  call to action  */
+.cta {
+  padding: 100px 0;
+  text-align: center;
+
+  h4 {
+    display: inline-block;
+    color: #414751;
+    font-family: "raleway-semibold", arial;
+    font-weight: bold;
+    font-size: 22px;
+    text-transform: uppercase;
+  }
+
+  .cta .cta_btn {
+    text-decoration: none;
+    padding: 20px 50px;
+    background: #fc884f;
+    color: #fff;
+    font-family: "raleway-regular", arial;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-left: 40px;
+    text-transform: uppercase;
+    transition: all .1s linear;
+    -webkit-transition: all .1s linear;
+
+    .cta_arrow {
+      margin-left: 10px;
+      &:hover{
+        background: #ec7236;
+      }
+
+    }
+  }
+}
+
+
+
+
+/*  clients  */
+.clients{
+  overflow: hidden;
+  padding: 100px 0;
+  background: #fbfafa;
+
+  ul li{
+    list-style: none;
+    display: block;
+    float: left;
+    margin-right: 190px;
+
+    &:last-child{
+      margin-right: 0;
+    }
+
+  }
+
+}
+
+
+
+
+
+
+
+
