@@ -10,31 +10,47 @@
             <br>
             Lets hope this gets populated pretty soon.
           </p>
+
+          <p>
+
+            <pre class="grey-text">
+  function Panel(element, canClose, closeHandler) {
+    this.element = element;
+    this.canClose = canClose;
+    this.closeHandler = function () { if (closeHandler) closeHandler() };
+  }
+            </pre>
+          </p>
+
         </div>
       </article>
     </div>
 
-    <aside class="col-1-3">
-      <h4>Links</h4>
-      <p>
-        <ul class="center-text link-list">
+    <aside class="col-1-3 home">
+      <section class="link-list">
+        <ul>
+
+          <li>
+            <h4>Links</h4>
+          </li>
 
           <li>
             <a href="http://emberjs.com/">
-              <img src="/assets/images/tomster.png" alt="Metrigo" width="30" height="30">
+              <img src="/assets/images/tomster.png" alt="Ember JS" width="30" height="30">
               Ember JS
             </a>
           </li>
 
           <li>
-            <a href="http://metrigo.com/">
-              <img src="/assets/images/metrigo.png" alt="Metrigo" width="26" height="30">
+            <a href="http://metrigo.com/"  class="clearfix">
+              <img src="/assets/images/metrigo.png" alt="Metrigo" width="28" height="30">
               Metrigo
             </a>
           </li>
 
         </ul>
-      </p>
+      </section>
+
     </aside>
   </section>
 </main>
