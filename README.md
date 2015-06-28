@@ -1,7 +1,7 @@
 # Portfolio
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+The repository for my website to test new things and have a little representation.
+[gerrit-sommer.de](https://gerrit-sommer.de/)
 
 ## Prerequisites
 
