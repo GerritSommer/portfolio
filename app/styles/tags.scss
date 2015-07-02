@@ -1,5 +1,6 @@
 .tag-list {
   margin: 1em 0;
+
   .tag-item {
     padding: 0.3em 0.4em;
     margin-right: 0.4em;
@@ -7,5 +8,10 @@
     background-color: #C7D7D4;
     color: #fff;
     cursor: pointer;
+
+    &.active {
+      background: #468847;
+    }
+
   }
 }

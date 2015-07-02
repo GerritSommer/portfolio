@@ -17,7 +17,6 @@ export default Ember.Controller.extend({
 
   actions: {
    selectTag: function(tag) {
-      console.log('test');
       this.set('selectedTag', tag);
     }
   }

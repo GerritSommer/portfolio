@@ -11,7 +11,7 @@
       <h4>Categories</h4>
       <div class="tag-list">
         {{#each tag in controller.tags}}
-          {{tag-item tagItem=tag action="selectTag"}}
+          {{tag-item tagItem=tag action="selectTag" selectedTag=selectedTag}}
         {{/each}}
       </div>
 

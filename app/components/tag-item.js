@@ -2,7 +2,13 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   tagName: 'span',
-  classNames: [ "tag-item" ],
+
+  classNameBindings: [ ":tag-item", 'tagActive:active' ],
+
+  tagActive: Ember.computed('selectedTag', function() {
+    // debugger
+    return this.get('tagItem.id') === this.get('selectedTag.id');
+  }),
 
   click: function() {
     this.sendAction('action', this.get('tagItem'));
