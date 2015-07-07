@@ -3,13 +3,13 @@
   {{buttonLabel}} {{fa-icon "caret-down"}}
 </button>
 
-<ul class="multi-select-dropdown {{isOpen}}">
+<ul class="multi-select-dropdown {{if isOpen 'open' ''}}">
   {{#if searchable}}
-    <li>{{input value=searchString autofocus="true"}}x</li>
+      {{input value=searchString autofocus="true"}} <i class="fa fa-remove" {{action 'clearSearch'}}></i>
   {{/if}}
   {{#each option in filteredOptions}}
-    <li {{action "select" option}} class="multi-select-item {{option.state}}">
-      <a>{{option.label}}</a>
+    <li {{action "select" option}} class="multi-select-item clearfix {{option.state}}">
+      <a>{{option.label}}</a> <i class="fa fa-check  {{if option.state '' 'hide'}}"></i>
     </li>
   {{/each}}
 </ul>

@@ -16,8 +16,9 @@ export default Ember.Component.extend({
     else {
       var selectedItem      = this.get('options').findBy(this.get('valuePath'), this.get('selection'));
       if (selectedItem && this.get('labelPath'))
-        var selectedItemLabel = selectedItem.get(this.get('labelPath'));
-      return selectedItemLabel || this.get('label') || 'please select';
+        return selectedItem.get(this.get('labelPath'));
+      else
+        return this.get('label') || 'please select';
     }
   }),
 
@@ -39,9 +40,9 @@ export default Ember.Component.extend({
     if (Ember.isBlank(searchString))
       return options;
     else {
-      return options.filter(function(option){
-        return option.get(labelPath).toLowerCase().indexOf(searchString.toLowerCase()) > -1
-      })
+      return options.filter(function(option) {
+        return option.get(labelPath).toLowerCase().indexOf(searchString.toLowerCase()) > -1;
+      });
     }
 
   }),
@@ -53,8 +54,8 @@ export default Ember.Component.extend({
 
     selected ? this.set('selection', null) : this.set('selection', value);
     this.toggleProperty('open');
-
   },
+
   setMultiSelection: function(item) {
     var valuePath = this.get('valuePath');
     var value     = valuePath ? item.get(valuePath) : item;
@@ -73,25 +74,30 @@ export default Ember.Component.extend({
 
   onDidInsertElement: (function() {
     window.$(document).mouseup((e) => {
-      if (this.$().has(e.target).length == 0) {
+      if (this.$().has(e.target).length === 0) {
         this.set('open', false);
-        this.set('searchString', '')
+        this.set('searchString', '');
       }
-    })
+    });
   }).on('init'),
-
 
   actions: {
 
     select: function(item) {
+      console.log('a')
       if (this.get('multiple'))
         this.setMultiSelection(item);
       else
         this.setSingleSelection(item);
+      return;
     },
 
     toggleDropdown: function() {
       this.toggleProperty('open');
+      return;
+    },
+    clearSearch: function() {
+      this.set('searchString', '');
     }
 
   }

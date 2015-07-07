@@ -17,7 +17,15 @@
               options=content
               valuePath="value"
               labelPath="label"
+              selection=test
             }}
+
+            <div>
+              {{#each thing in test}}
+                {{thing}}
+              {{/each}}
+            </div>
+
           </p>
 
           <p>
