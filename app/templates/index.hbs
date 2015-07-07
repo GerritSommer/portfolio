@@ -10,9 +10,17 @@
             <br>
             Lets hope this gets populated pretty soon.
           </p>
+          <h4>A test 'pre' container</h4>
 
           <p>
+            {{multi-select
+              options=content
+              valuePath="value"
+              labelPath="label"
+            }}
+          </p>
 
+          <p>
             <pre class="grey-text">
   function Panel(element, canClose, closeHandler) {
     this.element = element;
