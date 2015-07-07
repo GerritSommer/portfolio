@@ -1,0 +1,17 @@
+
+<button {{action 'toggleDropdown'}} class="{{open}}">
+  {{buttonLabel}} {{fa-icon "caret-down"}}
+</button>
+
+<ul class="multi-select-dropdown {{isOpen}}">
+  {{#if searchable}}
+    <li>{{input value=searchString autofocus="true"}}x</li>
+  {{/if}}
+  {{#each option in filteredOptions}}
+    <li {{action "select" option}} class="multi-select-item {{option.state}}">
+      <a>{{option.label}}</a>
+    </li>
+  {{/each}}
+</ul>
+
+{{yield}}
