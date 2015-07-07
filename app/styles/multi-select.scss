@@ -1,0 +1,63 @@
+.multi-select {
+  position: relative;
+
+  button.open {
+    background: #3a87ad;
+    color: #fff;
+
+    -webkit-transition:  all 200ms linear;
+    -moz-transition:     all 200ms linear;
+    -o-transition:       all 200ms linear;
+    -ms-transition:      all 200ms linear;
+    transition:          all 200ms linear;
+  }
+
+  ul.multi-select-dropdown {
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    padding:0;
+    background: #fff;
+    border: 1px solid #999;
+
+    &.open {
+      display: block;
+    }
+
+    li {
+      position:relative;
+      margin:0;
+      border-top: 1px solid #999;
+      min-width: 100px;
+      a {
+        padding:0 0.5em;
+      }
+      &:first-child {
+        border-top: 0;
+      }
+      &:hover {
+        background: #3a87ad;
+        a {
+          color: #fff;
+        }
+      }
+      &.selected {
+        background: #468847;
+        a {
+          color: #fff;
+        }
+      }
+
+      input {
+        line-height: 28px;
+        font-size: 1em;
+        padding-left: 0.3em;
+
+        margin: 0;
+        padding: 0;
+      }
+    }
+
+  }
+}
