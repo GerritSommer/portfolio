@@ -19,4 +19,7 @@ button, a.button {
     background: #468847;
     color: #fff;
   }
+  &:focus {
+    outline: 0;
+  }
 }

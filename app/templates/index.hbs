@@ -1,48 +1,44 @@
 <main>
-
   <section class="row">
-    <div class="col-3-1">
+    <div class="col col-8">
+
       <article>
-        <div>
-          <h3>About</h3>
-          <p>
-            This site is my experimental field for testing new ember features and to post some stuff about ember and other topics.
-            <br>
-            Lets hope this gets populated pretty soon.
-          </p>
-          <h4>A test 'pre' container</h4>
+        <h3>About</h3>
+        <p>
+          This site is my experimental field for testing new ember features and to post some stuff about ember and other topics.
+          <br>
+          Lets hope this gets populated pretty soon.
+        </p>
+      </article>
 
-          <p>
-            {{multi-select
-              options=content
-              valuePath="value"
-              labelPath="label"
-              selection=test
-            }}
+      <article>
+        <h4>A test multi-select component</h4>
 
-            <div>
-              {{#each thing in test}}
-                {{thing}}
-              {{/each}}
-            </div>
+        <p>
+          {{multi-select
+            options=content
+            valuePath="value"
+            labelPath="label"
+            selection=test
+          }}
+        </p>
+      </article>
 
-          </p>
-
-          <p>
-            <pre class="grey-text">
-  function Panel(element, canClose, closeHandler) {
-    this.element = element;
-    this.canClose = canClose;
-    this.closeHandler = function () { if (closeHandler) closeHandler() };
-  }
-            </pre>
-          </p>
-
-        </div>
+      <article>
+        <h4>A test 'pre' container</h4>
+        <p>
+          <pre class="grey-text">
+              function Panel(element, canClose, closeHandler) {
+              this.element = element;
+              this.canClose = canClose;
+              this.closeHandler = function () { if (closeHandler) closeHandler() };
+            }
+          </pre>
+        </p>
       </article>
     </div>
 
-    <aside class="col-1-3 home">
+    <aside class="col home">
       <section class="link-list">
         <ul>
 
@@ -68,7 +64,9 @@
       </section>
 
     </aside>
+
   </section>
+
 </main>
 
 

@@ -74,7 +74,7 @@ export default Ember.Component.extend({
 
   onDidInsertElement: (function() {
     window.$(document).mouseup((e) => {
-      if (this.$().has(e.target).length === 0) {
+      if (this.$() && this.$().has(e.target).length === 0) {
         this.set('open', false);
         this.set('searchString', '');
       }
@@ -84,7 +84,6 @@ export default Ember.Component.extend({
   actions: {
 
     select: function(item) {
-      console.log('a')
       if (this.get('multiple'))
         this.setMultiSelection(item);
       else

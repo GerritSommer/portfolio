@@ -16,14 +16,14 @@ body {
   font-size: 16px;
 }
 
-.clearfix:before, .clearfix:after, .row:before, .row:after {
-  content: " ";
-  display: table;
-}
+// .clearfix:before, .clearfix:after, .row:before, .row:after {
+//   content: " ";
+//   display: table;
+// }
 
-.clearfix:after, .row:after {
-  clear: both;
-}
+// .clearfix:after, .row:after {
+//   clear: both;
+// }
 
 .clearfix {
   *zoom: 1;

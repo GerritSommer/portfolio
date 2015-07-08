@@ -1,11 +1,15 @@
 <header>
-  <div class="wrapper">
-    {{#link-to 'index'}}
-      {{!-- <img src="assets/images/logo.png" class="logo"/> --}}
-      <span class="logo"><h2>sommer</h2></span>
-    {{/link-to}}
 
-    <nav>
+  <div class="wrapper row">
+    <div class="col col-3">
+      {{#link-to 'index'}}
+        {{!-- <img src="assets/images/logo.png" class="logo"/> --}}
+        <span class="logo"><h2>sommer</h2></span>
+      {{/link-to}}
+    </div>
+
+
+    <nav class="col">
       <ul>
         <li>
           {{#link-to 'index'}} Home {{/link-to}}
@@ -19,5 +23,6 @@
         <li><a href="#">rechts</a></li> --}}
       </ul>
     </nav>
+
   </div>
 </header>
